@@ -48,7 +48,7 @@ void task2() {
 }
 
 int main() {
-    system("chcp 1251");
+    system("chcp 65001");
     setlocale(LC_ALL, "ru");
 
     // Задание 1
