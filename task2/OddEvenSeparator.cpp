@@ -6,13 +6,13 @@ void OddEvenSeparator::add_number(int number) {
 }
 
 void OddEvenSeparator::even() {
-    cout << "×åòíûå ÷èñëà:\n";
+    cout << "Ğ§ĞµÑ‚Ğ½Ñ‹Ğµ Ñ‡Ğ¸ÑĞ»Ğ°:\n";
     for (const int el: this->numbers) if (!(el % 2)) cout << el << " ";
     cout << endl;
 }
 
 void OddEvenSeparator::odd() {
-    cout << "Íå÷åòíûå ÷èñëà:\n";
+    cout << "ĞĞµÑ‡ĞµÑ‚Ğ½Ñ‹Ğµ Ñ‡Ğ¸ÑĞ»Ğ°:\n";
     for (const int el: this->numbers) if (el % 2) cout << el << " ";
     cout << endl;
 }
