@@ -8,4 +8,6 @@ add_executable(laba2_2026 main.cpp
         task1/Bell.h
         task2/OddEvenSeparator.cpp
         task2/OddEvenSeparator.h
+        task3/Table.cpp
+        task3/Table.h
 )
