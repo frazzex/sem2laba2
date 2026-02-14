@@ -10,4 +10,8 @@ add_executable(laba2_2026 main.cpp
         task2/OddEvenSeparator.h
         task3/Table.cpp
         task3/Table.h
+        task5/Stock.cpp
+        task5/Stock.h
+        task5/Box.cpp
+        task5/Box.h
 )
