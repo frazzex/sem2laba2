@@ -100,6 +100,9 @@ void task3() {
                 cout << "Среднее арифметическое: " << table.average() << endl;
                 break;
             }
+            case 7: {
+                return;
+            }
 
             default:
                 break;
