@@ -112,24 +112,8 @@ void task3() {
 
 void task5() {
     Stock stock;
-    stock.add(34, 12);
-    stock.add(35, 13);
-    stock.add(36, 13);
-    stock.add(36, 14);
-    stock.add(37, 15);
-    stock.add(38, 16);
-    stock.add(39, 17);
-    stock.add(40, 18);
-    stock.add(40, 18);
-    stock.add(41, 19);
-    stock.add(42, 20);
-    stock.add(43, 21);
-    stock.add(43, 21);
-    stock.add(44, 22);
-    stock.add(45, 23);
-    stock.add(45, 23);
-    stock.add(45, 23);
 
+    for (int i = 0; i <= 20; i++ ) stock.add(34 + i, 12 + i);
 
     while (true) {
         int choice = -1;
