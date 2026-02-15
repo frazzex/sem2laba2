@@ -12,9 +12,11 @@ class OddEvenSeparator {
 public:
     void add_number(int number);
 
-    void even();
+    void even() const;
 
-    void odd();
+    void odd() const;
+
+    void all() const;
 
     void print() const;
 };

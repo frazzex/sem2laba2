@@ -22,7 +22,8 @@ void task2() {
         cout << "1. Добавить элемент\n";
         cout << "2. Напечатать четные числа массива\n";
         cout << "3. Напечатать нечетные числа массива\n";
-        cout << "4. Выйти\n";
+        cout << "4. Напечатать все числа массива\n";
+        cout << "5. Выйти\n";
 
         cin >> choice;
 
@@ -42,7 +43,11 @@ void task2() {
                 odd_even_separator.odd();
                 break;
             }
-            case 4:
+            case 4: {
+                odd_even_separator.all();
+                break;
+            }
+            case 5:
                 return;
             default:
                 break;
@@ -327,7 +332,7 @@ int main() {
 
     // Задание 2
 
-    // task2();
+    task2();
 
     // Задание 3
 
@@ -335,7 +340,7 @@ int main() {
 
     // Задание 4
 
-    task4();
+    // task4();
 
     // Задание 5
 
