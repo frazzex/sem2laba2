@@ -43,7 +43,7 @@ void Complex::trig_print() const {
     double phi = this->arg();
 
 
-    cout << r << " * (cos(" << phi << "°) + i sin(" << phi << "°))" << endl;
+    cout << r << " * (cos(" << phi << ") + i sin(" << phi << "))" << endl;
 }
 
 void Complex::exp_print() const {
