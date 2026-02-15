@@ -14,4 +14,6 @@ add_executable(laba2_2026 main.cpp
         task5/Stock.h
         task5/Box.cpp
         task5/Box.h
+        task4/Complex.cpp
+        task4/Complex.h
 )

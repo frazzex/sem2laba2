@@ -2,6 +2,7 @@
 #include "task1/Bell.h"
 #include "task2/OddEvenSeparator.h"
 #include "task3/Table.h"
+#include "task4/Complex.h"
 #include "task5/Stock.h"
 
 using namespace std;
@@ -110,6 +111,129 @@ void task3() {
     }
 }
 
+void task4() {
+    Complex z;
+
+    while (true) {
+        int choice = 0;
+
+        cout << "Текущее число: ";
+        z.print();
+
+        cout << "\nВыберите действие:\n"
+             << "1. Задать новое комплексное число\n"
+             << "2. Вычислить модуль\n"
+             << "3. Вычислить аргумент\n"
+             << "4. Вывести в алгебраической форме\n"
+             << "5. Вывести в тригонометрической форме\n"
+             << "6. Вывести в показательной форме\n"
+             << "7. Прибавить другое число\n"
+             << "8. Вычесть другое число\n"
+             << "9. Умножить на другое число\n"
+             << "10. Разделить на другое число\n"
+             << "11. Выйти\n\n";
+
+        cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                double re, im;
+                cout << "Введите действительную, а затем мнимую части: ";
+                cin >> re >> im;
+                z.set_re(re);
+                z.set_im(im);
+                cout << "Число установлено: \n";
+                z.print();
+                break;
+            }
+
+            case 2: {
+                cout << "Модуль числа: " << z.abs() << "\n";
+                break;
+            }
+
+            case 3: {
+                cout << "Аргумент числа: " << z.arg() << endl;
+                break;
+            }
+
+            case 4: {
+                cout << "Алгебраическая форма: ";
+                z.print();
+                break;
+            }
+
+            case 5: {
+                cout << "Тригонометрическая форма: ";
+                z.trig_print();
+                break;
+            }
+
+            case 6: {
+                cout << "Показательная форма: ";
+                z.exp_print();
+                break;
+            }
+
+            case 7: {
+                double re, im;
+                cout << "Введите слагаемое (re im): ";
+                cin >> re >> im;
+                Complex z2(re, im);
+                z = z.add(z2);
+                cout << "Результат: ";
+                z.print();
+                break;
+            }
+
+            case 8: {
+                double re, im;
+                cout << "Введите вычитаемое (re im): ";
+                cin >> re >> im;
+                Complex z2(re, im);
+                z = z.sub(z2);
+                cout << "Результат: ";
+                z.print();
+                break;
+            }
+
+            case 9: {
+                double re, im;
+                cout << "Введите множитель (re im): ";
+                cin >> re >> im;
+                Complex z2(re, im);
+                z = z.multi(z2);
+                cout << "Результат: ";
+                z.print();
+                break;
+            }
+
+            case 10: {
+                double re, im;
+                cout << "Введите делитель (re im): ";
+                cin >> re >> im;
+                Complex z2(re, im);
+
+                if (z2.abs() < 1e-10) {
+                    cout << "Нельзя делить на 0!\n";
+                } else {
+                    z = z.div(z2);
+                    cout << "Результат: ";
+                    z.print();
+                }
+                break;
+            }
+
+            case 11: {
+                return;
+            }
+
+            default:
+                break;
+        }
+    }
+}
+
 void task5() {
     Stock stock;
 
@@ -209,9 +333,13 @@ int main() {
 
     // task3();
 
+    // Задание 4
+
+    task4();
+
     // Задание 5
 
-    task5();
+    // task5();
 
     return 0;
 }
