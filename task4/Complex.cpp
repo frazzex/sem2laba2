@@ -42,9 +42,8 @@ void Complex::trig_print() const {
     double r = this->abs();
     double phi = this->arg();
 
-    double phi_deg = phi * 180.0 / M_PI;
 
-    cout << r << " * (cos(" << phi_deg << "°) + i sin(" << phi_deg << "°))" << endl;
+    cout << r << " * (cos(" << phi << "°) + i sin(" << phi << "°))" << endl;
 }
 
 void Complex::exp_print() const {
